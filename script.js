@@ -142,3 +142,25 @@ if (contactForm) {
     });
 
 }
+
+/* ANIMACIONES AL HACER SCROLL */
+
+const elementosAnimados = document.querySelectorAll(
+    '.service-card, .project-card, .testimonial-card, .faq-item, .pricing-card, .about-content, .contact-content'
+);
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+            observador.unobserve(entrada.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+elementosAnimados.forEach((elemento) => {
+    elemento.classList.add('reveal');
+    observador.observe(elemento);
+});
