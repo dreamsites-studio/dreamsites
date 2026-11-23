@@ -1142,3 +1142,25 @@ a {
     background-clip: text;
     color: transparent;
 }
+/* LOGO OFICIAL */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    display: block;
+    width: 190px;
+    height: 55px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+@media (max-width: 600px) {
+    .logo-image {
+        width: 155px;
+        height: 48px;
+    }
+}
