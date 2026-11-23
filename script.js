@@ -164,3 +164,57 @@ elementosAnimados.forEach((elemento) => {
     elemento.classList.add('reveal');
     observador.observe(elemento);
 });
+
+
+// FORMULARIO DE NUEVOS PROYECTOS
+
+const projectForm = document.getElementById("project-form");
+
+if (projectForm) {
+    projectForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const client = document.getElementById("project-client").value;
+        const business = document.getElementById("project-business").value;
+        const email = document.getElementById("project-email").value;
+        const service = document.getElementById("project-service").value;
+        const packageName = document.getElementById("project-package").value;
+        const colors = document.getElementById("project-colors").value;
+        const description = document.getElementById("project-description").value;
+        const sections = document.getElementById("project-sections").value;
+        const references = document.getElementById("project-references").value;
+        const materials = document.getElementById("project-materials").value;
+
+        const message = `
+*NUEVA SOLICITUD - DREAMSITES*
+
+*Cliente:* ${client}
+*Negocio:* ${business || "No especificado"}
+*Correo:* ${email}
+*Servicio:* ${service}
+*Paquete:* ${packageName}
+*Colores:* ${colors || "No especificados"}
+
+*Descripción:*
+${description}
+
+*Secciones necesarias:*
+${sections || "No especificadas"}
+
+*Referencias:*
+${references || "No proporcionadas"}
+
+*Materiales disponibles:*
+${materials || "No especificados"}
+        `;
+
+        // Reemplaza este texto por el número comercial
+        // autorizado y configurado con supervisión de un adulto.
+        const phone = "573053155801";
+
+        const whatsappURL =
+            `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappURL, "_blank");
+    });
+}
