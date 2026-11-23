@@ -566,146 +566,151 @@
             </p>
         </div>
 
-        <form class="project-form" id="project-form">
+        
+<form class="project-form" id="project-form">
 
-            <div class="form-section-title">
-    <span>02</span>
-    <h3>Detalles del proyecto</h3>
-    <p>Cuéntanos qué quieres construir.</p>
-            </div>
+    <!-- 01: INFORMACIÓN DEL CLIENTE -->
+    <div class="form-section-title">
+        <span>01</span>
+        <h3>Información del cliente</h3>
+        <p>Primero, conozcamos quién eres.</p>
+    </div>
 
-            <div class="form-grid">
+    <div class="form-grid">
 
-                <div class="form-group">
-                    <label for="project-client">Tu nombre</label>
-                    <input type="text" id="project-client"
-                        placeholder="Nombre completo" required>
-                </div>
+        <div class="form-group">
+            <label for="project-client">Tu nombre</label>
+            <input type="text" id="project-client"
+                placeholder="Nombre completo" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="project-business">Nombre del negocio</label>
-                    <input type="text" id="project-business"
-                        placeholder="Nombre de tu negocio">
-                </div>
+        <div class="form-group">
+            <label for="project-business">Nombre del negocio</label>
+            <input type="text" id="project-business"
+                placeholder="Nombre de tu negocio">
+        </div>
 
-                <div class="form-group">
-                    <label for="project-email">Correo electrónico</label>
-                    <input type="email" id="project-email"
-                        placeholder="correo@ejemplo.com" required>
-                </div>
+        <div class="form-group">
+            <label for="project-email">Correo electrónico</label>
+            <input type="email" id="project-email"
+                placeholder="correo@ejemplo.com" required>
+        </div>
 
-                <div class="form-group">
-                    <label for="project-service">Servicio que necesitas</label>
-                    <select id="project-service" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="Diseño web">Diseño web</option>
-                        <option value="Desarrollo web">Desarrollo web</option>
-                        <option value="Catálogo digital">Catálogo digital</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-                </div>
+    </div>
 
-                <div class="form-group">
-                    <label for="project-package">Paquete de interés</label>
-                    <select id="project-package" required>
-                        <option value="">Selecciona un paquete</option>
-                        <option value="Starter">Starter</option>
-                        <option value="Business">Business</option>
-                        <option value="Catalog">Catalog</option>
-                        <option value="No estoy seguro">No estoy seguro</option>
-                    </select>
-                </div>
+    <!-- 02: DETALLES DEL PROYECTO -->
+    <div class="form-section-title">
+        <span>02</span>
+        <h3>Detalles del proyecto</h3>
+        <p>Cuéntanos qué quieres construir.</p>
+    </div>
 
-                <div class="form-group">
-                    <label for="project-colors">Colores preferidos</label>
-                    <input type="text" id="project-colors"
-                        placeholder="Ej. Azul, blanco y negro">
-                </div>
+    <div class="form-grid">
 
-            </div>
+        <div class="form-group">
+            <label for="project-service">Servicio que necesitas</label>
+            <select id="project-service" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Diseño web">Diseño web</option>
+                <option value="Desarrollo web">Desarrollo web</option>
+                <option value="Catálogo digital">Catálogo digital</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
 
-            <div class="form-group">
-                <label for="project-description">
-                    Cuéntanos tu idea
-                </label>
-                <textarea id="project-description" rows="5"
-                    placeholder="¿Qué tipo de página quieres crear?"
-                    required></textarea>
-            </div>
+        <div class="form-group">
+            <label for="project-package">Paquete de interés</label>
+            <select id="project-package" required>
+                <option value="">Selecciona un paquete</option>
+                <option value="Starter">Starter</option>
+                <option value="Business">Business</option>
+                <option value="Catalog">Catalog</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+            </select>
+        </div>
 
-            <div class="form-group">
-                <label for="project-sections">
-                    ¿Qué secciones necesitas?
-                </label>
-                <textarea id="project-sections" rows="3"
-                    placeholder="Ej. Inicio, servicios, galería, contacto..."></textarea>
-            </div>
+    </div>
 
-            <div class="form-group">
-                <label for="project-references">
-                    Páginas de referencia (opcional)
-                </label>
-                <textarea id="project-references" rows="2"
-                    placeholder="Comparte enlaces de páginas que te gusten"></textarea>
-            </div>
+    <div class="form-group">
+        <label for="project-description">Cuéntanos tu idea</label>
+        <textarea id="project-description" rows="5"
+            placeholder="¿Qué tipo de página quieres crear?"
+            required></textarea>
+    </div>
 
-            <div class="form-section-title">
-            <span>03</span>
-            <h3>Diseño y materiales</h3>
-            <p>Definamos la apariencia de tu página.</p>
-            </div>
+    <div class="form-group">
+        <label for="project-sections">¿Qué secciones necesitas?</label>
+        <textarea id="project-sections" rows="3"
+            placeholder="Ej. Inicio, servicios, galería, contacto..."></textarea>
+    </div>
 
-            <div class="form-group">
-                <label for="project-materials">
-                    ¿Qué materiales tienes disponibles?
-                </label>
-                <input type="text" id="project-materials"
-                    placeholder="Ej. Logo, fotografías, textos...">
-            </div>
+    <!-- 03: DISEÑO Y MATERIALES -->
+    <div class="form-section-title">
+        <span>03</span>
+        <h3>Diseño y materiales</h3>
+        <p>Definamos la apariencia de tu página.</p>
+    </div>
 
-<div class="form-section-title">
-    <span>01</span>
-    <h3>Información del cliente</h3>
-    <p>Primero, conozcamos quién eres.</p>
-</div>
+    <div class="form-grid">
 
-<div class="form-group">
-    <label for="project-logo">¿Ya tienes un logotipo?</label>
-    <select id="project-logo">
-        <option value="">Selecciona una opción</option>
-        <option value="Sí, tengo logotipo">Sí</option>
-        <option value="No tengo logotipo">No</option>
-        <option value="Necesito actualizarlo">Quiero actualizarlo</option>
-    </select>
-</div>
+        <div class="form-group">
+            <label for="project-colors">Colores preferidos</label>
+            <input type="text" id="project-colors"
+                placeholder="Ej. Azul, blanco y negro">
+        </div>
 
-<div class="form-group">
-    <label for="project-style">¿Qué estilo visual prefieres?</label>
-    <select id="project-style">
-        <option value="">Selecciona un estilo</option>
-        <option value="Moderno y tecnológico">Moderno y tecnológico</option>
-        <option value="Minimalista">Minimalista</option>
-        <option value="Elegante">Elegante</option>
-        <option value="Colorido y creativo">Colorido y creativo</option>
-        <option value="Otro / Por definir">Otro / Por definir</option>
-    </select>
-</div>
+        <div class="form-group">
+            <label for="project-logo">¿Ya tienes un logotipo?</label>
+            <select id="project-logo">
+                <option value="">Selecciona una opción</option>
+                <option value="Sí, tengo logotipo">Sí</option>
+                <option value="No tengo logotipo">No</option>
+                <option value="Necesito actualizarlo">Quiero actualizarlo</option>
+            </select>
+        </div>
 
-<div class="form-group">
-    <label for="project-deadline">¿Para cuándo necesitas la página?</label>
-    <input type="date" id="project-deadline">
-</div>
+        <div class="form-group">
+            <label for="project-style">¿Qué estilo visual prefieres?</label>
+            <select id="project-style">
+                <option value="">Selecciona un estilo</option>
+                <option value="Moderno y tecnológico">Moderno y tecnológico</option>
+                <option value="Minimalista">Minimalista</option>
+                <option value="Elegante">Elegante</option>
+                <option value="Colorido y creativo">Colorido y creativo</option>
+                <option value="Otro / Por definir">Otro / Por definir</option>
+            </select>
+        </div>
 
-            <p class="form-notice">
-                Enviar una solicitud no confirma una contratación.
-                Primero revisaremos tu idea y prepararemos una propuesta.
-            </p>
+        <div class="form-group">
+            <label for="project-deadline">¿Para cuándo necesitas la página?</label>
+            <input type="date" id="project-deadline">
+        </div>
 
-            <button type="submit" class="primary-button">
-                Enviar solicitud ↗
-            </button>
+    </div>
 
-        </form>
+    <div class="form-group">
+        <label for="project-references">Páginas de referencia (opcional)</label>
+        <textarea id="project-references" rows="2"
+            placeholder="Comparte enlaces de páginas que te gusten"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="project-materials">¿Qué materiales tienes disponibles?</label>
+        <input type="text" id="project-materials"
+            placeholder="Ej. Logo, fotografías, textos...">
+    </div>
+
+    <p class="form-notice">
+        Enviar una solicitud no confirma una contratación.
+        Primero revisaremos tu idea y prepararemos una propuesta.
+    </p>
+
+    <button type="submit" class="primary-button">
+        Enviar solicitud ↗
+    </button>
+
+</form>
+
     </div>
 </section>
 
