@@ -1,839 +1,185 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="jNovLh19y_DhCinlGGL9Z2XGXpUxKB0JKY3QW1xtzkI" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DreamSites | Diseño y desarrollo web</title>
+    <title>Alberto Acosta | Autor y escritor</title>
+    <meta name="description" content="Descubre las obras de Alberto Acosta. Cuatro libros, cuatro universos por explorar.">
 
-    <meta name="description" content="En DreamSites diseñamos y desarrollamos páginas web modernas, profesionales y adaptadas a tu negocio. Convierte tus ideas en experiencias digitales.">
-
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="DreamSites">
-    <meta name="theme-color" content="#0B1020">
-
-    <!-- Open Graph: vista previa al compartir -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DreamSites | Diseño web profesional">
-    <meta property="og:description" content="Diseñamos experiencias digitales modernas para negocios y marcas.">
-    <meta property="og:url" content="https://dreamsites-studio.github.io/dreamsites/">
-    <meta property="og:image" content="https://dreamsites-studio.github.io/dreamsites/assets/dreamsites-logo.png">
-
-    <!-- Icono -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-
-    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
-    <!-- NAVBAR -->
-    
-<header class="navbar">
-    <div class="container nav-content">
+    <header class="header">
+        <a href="#inicio" class="logo">AA<span>.</span></a>
 
-        <a href="#inicio" class="logo">
-    <img src="assets/dreamsites-logo.png"
-         alt="DreamSites"
-         class="logo-image">
-</a>
-        <div class="nav-menu" id="nav-menu">
+        <nav class="nav" id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#libros">Libros</a>
+            <a href="#autor">El autor</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-            <nav class="nav-links">
-                <a href="#faq">Preguntas frecuentes</a>
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#testimonios">Testimonios</a>
-            </nav>
-
-            <a href="#contacto" class="nav-button">
-                Hablemos <span>↗</span>
-            </a>
-
-        </div>
-
-        <button class="nav-toggle"
-                id="nav-toggle"
-                aria-label="Abrir menú"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="menu-button" id="menu-button" aria-label="Abrir menú">
+            ☰
         </button>
+    </header>
 
-    </div>
-</header>
-
-
-
-    <!-- HERO -->
     <main>
 
         <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
 
-            <div class="hero-glow"></div>
+            <div class="hero-content">
+                <span class="eyebrow">UN UNIVERSO DE HISTORIAS</span>
 
-            <div class="container hero-content">
+                <h1>ALBERTO<br><span>ACOSTA</span></h1>
 
-                <div class="hero-text">
+                <div class="gold-line"></div>
 
-                    <div class="hero-label">
-                        <span class="status-dot"></span>
-                        ESTUDIO DIGITAL CREATIVO
-                    </div>
+                <p>
+                    Cada libro es un universo.
+                    Cada historia, una huella que permanece.
+                </p>
 
-                    <h1>
-                        Tu próxima gran idea
-                        <span>merece una gran web.</span>
-                    </h1>
-
-                    <p>
-                        Diseñamos y desarrollamos experiencias digitales
-                        modernas que ayudan a las marcas a destacar
-                        en internet.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#proyectos" class="primary-button">
-                            Explorar proyectos ↗
-                        </a>
-
-                        <a href="#servicios" class="secondary-button">
-                            Nuestros servicios
-                        </a>
-
-                    </div>
-
-                    <div class="hero-trust">
-                        Diseño creativo <span>•</span>
-                        Tecnología <span>•</span>
-                        Innovación
-                    </div>
-
-                </div>
-
-                <div class="hero-visual">
-
-                    <div class="visual-card">
-
-                        <div class="visual-top">
-                            <div class="window-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <span>dreamsites.dev</span>
-                        </div>
-
-                        <div class="visual-content">
-
-                            <div class="visual-icon">✳</div>
-
-                            <div class="visual-small">
-                                DIGITAL EXPERIENCES
-                            </div>
-
-                            <h2>Think beyond.</h2>
-
-                            <h2 class="gradient-text">
-                                Create more.
-                            </h2>
-
-                            <div class="visual-line"></div>
-
-                            <div class="visual-bottom">
-                                <span>DESIGN</span>
-                                <span>DEVELOPMENT</span>
-                                <span>INNOVATION</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="floating-tag tag-one">
-                        ✦ Creative Design
-                    </div>
-
-                    <div class="floating-tag tag-two">
-                        &lt;/&gt; Development
-                    </div>
-
-                </div>
-
+                <a href="#libros" class="hero-button">
+                    EXPLORAR SUS LIBROS <span>↗</span>
+                </a>
             </div>
 
-        </section>
-
-
-        <!-- SERVICIOS -->
-        <section class="services" id="servicios">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span>QUÉ HACEMOS</span>
-                    <h2>Ideas que se convierten en experiencias.</h2>
-                </div>
-
-                <div class="service-grid">
-
-                    <article class="service-card">
-                        <div class="service-icon">◈</div>
-                        <h3>Diseño web</h3>
-                        <p>Diseños modernos, atractivos y adaptados a cada marca.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">&lt;/&gt;</div>
-                        <h3>Desarrollo web</h3>
-                        <p>Páginas rápidas, funcionales y compatibles con diferentes dispositivos.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon">▦</div>
-                        <h3>Catálogos digitales</h3>
-                        <p>Presenta tus productos y servicios de una manera profesional.</p>
-                    </article>
-
-                </div>
-
+            <div class="hero-bottom">
+                <span>AUTOR · ESCRITOR</span>
+                <span>01 — 04</span>
             </div>
         </section>
-        
 
-<!-- PLANES Y PRECIOS -->
-<section class="pricing-section" id="precios">
-    <div class="container">
+        <section class="intro" id="autor">
+            <span class="section-label">EL MUNDO DE LAS PALABRAS</span>
 
-        <div class="section-header">
-            <span class="section-tag">PRECIOS</span>
-            <h2>Planes para hacer realidad tu idea.</h2>
-            <p>Soluciones digitales para cada etapa de tu negocio.</p>
-        </div>
-
-        <div class="pricing-grid">
-
-            <article class="pricing-card">
-                <span class="pricing-label">PARA COMENZAR</span>
-                <h3>Starter</h3>
-                <p class="pricing-description">
-                    Lo esencial para tener presencia en internet.
-                </p>
-                <div class="pricing-price">
-                    <span>$</span>60.000
-                    <small>COP</small>
-                </div>
-                <ul>
-                    <li>✓ Página web sencilla</li>
-                    <li>✓ Diseño adaptable a celulares</li>
-                    <li>✓ Información de tu negocio</li>
-                </ul>
-                <a href="#contacto" class="pricing-button">
-                    Elegir Starter ↗
-                </a>
-            </article>
-
-            <article class="pricing-card featured">
-                <span class="pricing-badge">MÁS COMPLETO</span>
-                <span class="pricing-label">PARA CRECER</span>
-                <h3>Business</h3>
-                <p class="pricing-description">
-                    Una presencia digital más profesional.
-                </p>
-                <div class="pricing-price">
-                    <span>$</span>100.000
-                    <small>COP</small>
-                </div>
-                <ul>
-                    <li>✓ Página web profesional</li>
-                    <li>✓ Varias secciones</li>
-                    <li>✓ Galería de imágenes</li>
-                    <li>✓ Formulario de contacto</li>
-                </ul>
-                <a href="#contacto" class="pricing-button">
-                    Elegir Business ↗
-                </a>
-            </article>
-
-            <article class="pricing-card">
-                <span class="pricing-label">PARA VENDER</span>
-                <h3>Catalog</h3>
-                <p class="pricing-description">
-                    Presenta tus productos de forma atractiva.
-                </p>
-                <div class="pricing-price">
-                    <span>$</span>120.000
-                    <small>COP</small>
-                </div>
-                <ul>
-                    <li>✓ Catálogo digital</li>
-                    <li>✓ Productos con imágenes y precios</li>
-                    <li>✓ Filtros de búsqueda</li>
-                    <li>✓ Contacto por WhatsApp</li>
-                </ul>
-                <a href="#contacto" class="pricing-button">
-                    Elegir Catalog ↗
-                </a>
-            </article>
-
-        </div>
-
-        <p class="pricing-note">
-            Los precios son iniciales. Dominio, alojamiento y funciones
-            adicionales pueden tener costos aparte.
-        </p>
-
-    </div>
-</section>
-
-
-
-        
-<!-- PORTAFOLIO -->
-
-<section class="projects" id="proyectos">
-    <div class="container">
-
-        <div class="section-heading">
-            <span>NUESTRO PORTAFOLIO</span>
-            <h2>Proyectos que dan vida a las ideas.</h2>
-            <p>Explora algunos de nuestros conceptos digitales.</p>
-        </div>
-
-        <div class="projects-grid">
-
-            <!-- LUMIÈRE -->
-            <article class="project-card">
-
-                <a
-                    href="https://dreamsites-studio.github.io/dreamsites/restaurante/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="portfolio-link"
-                >
-                    <div class="portfolio-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000"
-                            alt="Interior elegante de restaurante"
-                        >
-
-                        <span class="demo-label">
-                            DEMO · PROYECTO FICTICIO
-                        </span>
-
-                        <span class="portfolio-number">01 / RESTAURANTE</span>
-
-                        <div class="portfolio-overlay">
-                            <span>Ver proyecto ↗</span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="portfolio-info">
-                    <div>
-                        <h3>LUMIÈRE</h3>
-                        <p>
-                            Experiencia digital para un restaurante
-                            de estilo gourmet.
-                        </p>
-                    </div>
-                    <span class="portfolio-category">WEB DESIGN</span>
-                </div>
-
-            </article>
-
-            <!-- NEXORA -->
-            <article class="project-card">
-
-                <a
-                    href="https://dreamsites-studio.github.io/dreamsites/nexora/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="portfolio-link"
-                >
-                    <div class="portfolio-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1000"
-                            alt="Productos tecnológicos y electrónicos"
-                        >
-
-                        <span class="demo-label">
-                            DEMO · PROYECTO FICTICIO
-                        </span>
-
-                        <span class="portfolio-number">02 / TECNOLOGÍA</span>
-
-                        <div class="portfolio-overlay">
-                            <span>Ver proyecto ↗</span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="portfolio-info">
-                    <div>
-                        <h3>NEXORA</h3>
-                        <p>
-                            Concepto de tienda tecnológica con
-                            catálogo y carrito interactivo.
-                        </p>
-                    </div>
-                    <span class="portfolio-category">E-COMMERCE DEMO</span>
-                </div>
-
-            </article>
-
-            <!-- ALBERTO ACOSTA -->
-            <article class="project-card">
-
-                <a
-                    href="https://dreamsites-studio.github.io/dreamsites/alberto-acosta/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="portfolio-link"
-                >
-                    <div class="portfolio-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1000"
-                            alt="Biblioteca literaria con estanterías de libros"
-                        >
-
-                        <span class="demo-label">
-                            DEMO · PÁGINA DE AUTOR
-                        </span>
-
-                        <span class="portfolio-number">03 / LITERATURA</span>
-
-                        <div class="portfolio-overlay">
-                            <span>Ver proyecto ↗</span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="portfolio-info">
-                    <div>
-                        <h3>ALBERTO ACOSTA</h3>
-                        <p>
-                            Experiencia editorial cinematográfica
-                            para descubrir obras literarias.
-                        </p>
-                    </div>
-                    <span class="portfolio-category">AUTHOR WEBSITE</span>
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-</section>
-
-
-
-        <!-- CONTACTO -->
-        
-<section class="testimonials" id="testimonios">
-    <div class="container">
-
-        <div class="testimonials-heading">
-            <span>OPINIONES DE EJEMPLO</span>
-            <h2>Ideas que inspiran.<br>
-                <span>Experiencias que conectan.</span>
+            <h2>
+                Historias que invitan<br>
+                a <span>mirar más allá.</span>
             </h2>
-            <p>Así podrían verse las experiencias de nuestros futuros clientes.</p>
-        </div>
 
-        <div class="testimonials-grid">
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p>
-                    "Una página moderna, elegante y fácil de navegar.
-                    Justo lo que necesitaba para presentar mi negocio."
-                </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">M</div>
-                    <div>
-                        <h3>Mariana</h3>
-                        <span>Ejemplo ficticio</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p>
-                    "El diseño transmite profesionalismo y permite
-                    mostrar los productos de una manera atractiva."
-                </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">D</div>
-                    <div>
-                        <h3>Daniel</h3>
-                        <span>Ejemplo ficticio</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars">★★★★★</div>
-                <p>
-                    "Una propuesta visual muy interesante.
-                    Me encanta la combinación de colores y el diseño."
-                </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">S</div>
-                    <div>
-                        <h3>Sofía</h3>
-                        <span>Ejemplo ficticio</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <p class="testimonial-notice">
-            Estas opiniones son ficticias y se muestran únicamente como demostración.
-        </p>
-
-    </div>
-</section>
-
-<section class="faq" id="faq">
-    <div class="container">
-
-        <div class="faq-heading">
-            <span>¿TIENES DUDAS?</span>
-            <h2>Resolvemos tus <span>preguntas.</span></h2>
-            <p>Todo lo que necesitas saber antes de comenzar tu proyecto.</p>
-        </div>
-
-        <div class="faq-list">
-
-            <details class="faq-item">
-                <summary>¿Cuánto tarda crear una página web?</summary>
-                <p>
-                    Depende de la complejidad del proyecto y del contenido.
-                    Antes de comenzar, acordaremos un plazo de entrega.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>¿Qué incluye cada paquete?</summary>
-                <p>
-                    Cada paquete tiene diferentes características.
-                    Puedes consultar nuestra sección de precios para conocer
-                    los servicios incluidos.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>¿Necesito tener un dominio?</summary>
-                <p>
-                    No necesariamente. Podemos comenzar con una dirección
-                    gratuita. Si deseas un dominio propio, su costo se cotiza
-                    por separado.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>¿Puedo solicitar cambios?</summary>
-                <p>
-                    ¡Claro! Podemos acordar revisiones y ajustes durante
-                    el desarrollo del proyecto.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>¿Cómo puedo contratar sus servicios?</summary>
-                <p>
-                    Puedes escribirnos mediante nuestro formulario de contacto
-                    o el botón de WhatsApp para conversar sobre tu idea.
-                </p>
-            </details>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- FORMULARIO DE PROYECTOS -->
-<section class="project-request" id="nuevo-proyecto">
-    <div class="container">
-
-        <div class="section-heading">
-            <span>EMPECEMOS A CREAR</span>
-            <h2>Cuéntanos sobre tu proyecto.</h2>
             <p>
-                Completa estos datos para que podamos conocer
-                tu idea y preparar una propuesta.
+                Una colección de obras para descubrir, explorar
+                y dejarse llevar por el poder de la literatura.
             </p>
-        </div>
+        </section>
 
-        
-<form class="project-form" id="project-form">
+        <section class="books" id="libros">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">LA BIBLIOTECA</span>
+                    <h2>Sus <span>obras</span></h2>
+                </div>
 
-    <!-- 01: INFORMACIÓN DEL CLIENTE -->
-    <div class="form-section-title">
-        <span>01</span>
-        <h3>Información del cliente</h3>
-        <p>Primero, conozcamos quién eres.</p>
-    </div>
-
-    <div class="form-grid">
-
-        <div class="form-group">
-            <label for="project-client">Tu nombre</label>
-            <input type="text" id="project-client"
-                placeholder="Nombre completo" required>
-        </div>
-
-        <div class="form-group">
-            <label for="project-business">Nombre del negocio</label>
-            <input type="text" id="project-business"
-                placeholder="Nombre de tu negocio">
-        </div>
-
-        <div class="form-group">
-            <label for="project-email">Correo electrónico</label>
-            <input type="email" id="project-email"
-                placeholder="correo@ejemplo.com" required>
-        </div>
-
-    </div>
-
-    <!-- 02: DETALLES DEL PROYECTO -->
-    <div class="form-section-title">
-        <span>02</span>
-        <h3>Detalles del proyecto</h3>
-        <p>Cuéntanos qué quieres construir.</p>
-    </div>
-
-    <div class="form-grid">
-
-        <div class="form-group">
-            <label for="project-service">Servicio que necesitas</label>
-            <select id="project-service" required>
-                <option value="">Selecciona una opción</option>
-                <option value="Diseño web">Diseño web</option>
-                <option value="Desarrollo web">Desarrollo web</option>
-                <option value="Catálogo digital">Catálogo digital</option>
-                <option value="Otro">Otro</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="project-package">Paquete de interés</label>
-            <select id="project-package" required>
-                <option value="">Selecciona un paquete</option>
-                <option value="Starter">Starter</option>
-                <option value="Business">Business</option>
-                <option value="Catalog">Catalog</option>
-                <option value="No estoy seguro">No estoy seguro</option>
-            </select>
-        </div>
-
-    </div>
-
-    <div class="form-group">
-        <label for="project-description">Cuéntanos tu idea</label>
-        <textarea id="project-description" rows="5"
-            placeholder="¿Qué tipo de página quieres crear?"
-            required></textarea>
-    </div>
-
-    <div class="form-group">
-        <label for="project-sections">¿Qué secciones necesitas?</label>
-        <textarea id="project-sections" rows="3"
-            placeholder="Ej. Inicio, servicios, galería, contacto..."></textarea>
-    </div>
-
-    <!-- 03: DISEÑO Y MATERIALES -->
-    <div class="form-section-title">
-        <span>03</span>
-        <h3>Diseño y materiales</h3>
-        <p>Definamos la apariencia de tu página.</p>
-    </div>
-
-    <div class="form-grid">
-
-        <div class="form-group">
-            <label for="project-colors">Colores preferidos</label>
-            <input type="text" id="project-colors"
-                placeholder="Ej. Azul, blanco y negro">
-        </div>
-
-        <div class="form-group">
-            <label for="project-logo">¿Ya tienes un logotipo?</label>
-            <select id="project-logo">
-                <option value="">Selecciona una opción</option>
-                <option value="Sí, tengo logotipo">Sí</option>
-                <option value="No tengo logotipo">No</option>
-                <option value="Necesito actualizarlo">Quiero actualizarlo</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="project-style">¿Qué estilo visual prefieres?</label>
-            <select id="project-style">
-                <option value="">Selecciona un estilo</option>
-                <option value="Moderno y tecnológico">Moderno y tecnológico</option>
-                <option value="Minimalista">Minimalista</option>
-                <option value="Elegante">Elegante</option>
-                <option value="Colorido y creativo">Colorido y creativo</option>
-                <option value="Otro / Por definir">Otro / Por definir</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="project-deadline">¿Para cuándo necesitas la página?</label>
-            <input type="date" id="project-deadline">
-        </div>
-
-    </div>
-
-    <div class="form-group">
-        <label for="project-references">Páginas de referencia (opcional)</label>
-        <textarea id="project-references" rows="2"
-            placeholder="Comparte enlaces de páginas que te gusten"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label for="project-materials">¿Qué materiales tienes disponibles?</label>
-        <input type="text" id="project-materials"
-            placeholder="Ej. Logo, fotografías, textos...">
-    </div>
-
-    <p class="form-notice">
-        Enviar una solicitud no confirma una contratación.
-        Primero revisaremos tu idea y prepararemos una propuesta.
-    </p>
-
-    <button type="submit" class="primary-button">
-        Enviar solicitud ↗
-    </button>
-
-</form>
-
-    </div>
-</section>
-
-
-<section class="contact" id="contacto">
-    <div class="container contact-content">
-
-        <span>¿TIENES UN PROYECTO?</span>
-
-        <h2>
-            Hagamos algo
-            <span>extraordinario.</span>
-        </h2>
-
-        <p>Cuéntanos tu idea y comencemos a construirla.</p>
-
-        <form class="contact-form" id="contact-form">
-
-            <div class="form-group">
-                <label for="client-name">Tu nombre</label>
-                <input
-                    type="text"
-                    id="client-name"
-                    placeholder="¿Cómo te llamas?"
-                    required
-                >
+                <p>CUATRO LIBROS · CUATRO EXPERIENCIAS</p>
             </div>
 
-            <div class="form-group">
-                <label for="client-email">Tu correo</label>
-                <input
-                    type="email"
-                    id="client-email"
-                    placeholder="correo@ejemplo.com"
-                    required
-                >
+            <div class="book-grid">
+
+                <article class="book-card">
+                    <div class="book-cover">
+                    <img src="assets/presuncion.jpg" alt="Portada de Presunción de Poema">
+                    </div>
+                    <div class="book-info">
+                        <span>OBRA Nº 01</span>
+                        <h3>Presunción de Poema</h3>
+                        <a href="https://www.amazon.com/-/es/Alberto-Acosta-ebook/dp/B07H7WVW3H" target="_blank" rel="noopener noreferrer">
+                            VER EN AMAZON ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover">
+                    <img src="assets/puertas-cielo.jpg" alt="Portada de Tocando a las puertas del cielo">
+                    </div>
+                    <div class="book-info">
+                        <span>OBRA Nº 02</span>
+                        <h3>Tocando a las puertas del cielo</h3>
+                        <a href="https://www.amazon.com/-/es/Alberto-Acosta-ebook/dp/B07GY11C28/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" target="_blank" rel="noopener noreferrer">
+                            VER EN AMAZON ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover">
+                    <img src="assets/ratoncito-nicolas.jpg" alt="Portada de El ratoncito Nicolás">
+                    </div>
+                    <div class="book-info">
+                        <span>OBRA Nº 03</span>
+                        <h3>El Ratoncito Nicolás</h3>
+                        <a href="https://www.amazon.com/-/es/Alberto-Acosta-ebook/dp/B086YYC1CD" target="_blank" rel="noopener noreferrer">
+                            VER EN AMAZON ↗
+                        </a>
+                    </div>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover">
+                    <img src="assets/general-sherman.jpg" alt="Portada de El general Sherman">
+                    </div>
+                    <div class="book-info">
+                        <span>OBRA Nº 04</span>
+                        <h3>El General Sherman</h3>
+                        <a href="https://www.amazon.com/Alberto-Acosta-ebook/dp/B07GTQC1Q1?psc=1" target="_blank" rel="noopener noreferrer">
+                            VER EN AMAZON ↗
+                        </a>
+                    </div>
+                </article>
+
             </div>
+        </section>
 
-            <div class="form-group">
-                <label for="project-type">¿Qué necesitas?</label>
-                <select id="project-type" required>
-                    <option value="">Selecciona un servicio</option>
-                    <option value="Diseño web">Diseño web</option>
-                    <option value="Desarrollo web">Desarrollo web</option>
-                    <option value="Catálogo digital">Catálogo digital</option>
-                    <option value="Otro proyecto">Otro proyecto</option>
-                </select>
-            </div>
+        <section class="quote">
+            <span>EL PODER DE LA LITERATURA</span>
+            <h2>Las historias no terminan<br>cuando cerramos un libro.</h2>
+            <div class="gold-line"></div>
+        </section>
 
-            <div class="form-group">
-                <label for="client-message">Cuéntanos tu idea</label>
-                <textarea
-                    id="client-message"
-                    rows="5"
-                    placeholder="Describe brevemente tu proyecto..."
-                    required
-                ></textarea>
-            </div>
-
-            <button type="submit" class="primary-button">
-                Enviar solicitud ↗
-            </button>
-
-        </form>
-
-    </div>
-</section>
-
+        <section class="contact" id="contacto">
+            <span class="section-label">SIGAMOS EN CONTACTO</span>
+            <h2>El próximo capítulo<br><span>comienza aquí.</span></h2>
+            <p>Gracias por descubrir este universo de historias.</p>
+            <a href="#libros" class="hero-button">DESCUBRIR LAS OBRAS ↗</a>
+        </section>
 
     </main>
 
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-
-            <a href="#inicio" class="logo">
-    <img src="assets/dreamsites-logo.png"
-         alt="DreamSites"
-         class="logo-image">
-
-
-
-</a>
-
-            <p>© 2026 DreamSites. Todos los derechos reservados.</p>
-
-            <span>Designed with creativity.</span>
-
-        </div>
+    <footer>
+        <a href="#inicio" class="logo">AA<span>.</span></a>
+        <p>© <span id="year"></span> Alberto Acosta. Todos los derechos reservados.</p>
+        <a href="#inicio">VOLVER ARRIBA ↑</a>
     </footer>
 
     <script src="script.js"></script>
 
-<a
-    href="https://wa.me/573053155801?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar por WhatsApp"
->
-    <span>WhatsApp</span>
-    <strong>↗</strong>
-</a>
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<div class="whatsapp-widget">
+    <div class="whatsapp-message">
+        <span>¿Hablamos?</span>
+        <p>Cuéntanos tu idea y hagámosla realidad.</p>
+    </div>
+
+    <a href="https://wa.me/573245450718"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-button"
+       aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16 .5A15.4 15.4 0 0 0 2.7 23.7L.5 31.5l8-2.1A15.5 15.5 0 1 0 16 .5Zm0 28.2a12.7 12.7 0 0 1-6.5-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A12.7 12.7 0 1 1 16 28.7Zm7-9.5c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2s-.9 1.2-1.1 1.4-.4.3-.8.1a10.3 10.3 0 0 1-3-1.9 11.2 11.2 0 0 1-2.1-2.6c-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.3 1.4 3.5a13.2 13.2 0 0 0 5.1 4.5c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 2.2-.9 2.5-1.7.3-.8.3-1.5.2-1.7s-.3-.3-.6-.5Z"/>
+        </svg>
+    </a>
+</div>
 
 </body>
 </html>
