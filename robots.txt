@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://dreamsites-studio.github.io/dreamsites/sitemap.xml
