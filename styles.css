@@ -1164,3 +1164,128 @@ a {
         height: 48px;
     }
 }
+
+/* CONTACTO - DREAMSITES */
+
+.contact {
+    position: relative;
+    padding: 110px 20px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(109, 93, 251, 0.16), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(32, 201, 216, 0.12), transparent 35%),
+        #0B1020;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content > span {
+    display: inline-block;
+    color: #20C9D8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.contact-content h2 {
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.1;
+    color: #F4F6FF;
+    margin-bottom: 20px;
+}
+
+.contact-content h2 span {
+    display: block;
+    background: linear-gradient(90deg, #6D5DFB, #20C9D8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-content > p {
+    color: #AAB1C8;
+    margin-bottom: 45px;
+    font-size: 16px;
+}
+
+.contact-form {
+    padding: 35px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 23px;
+}
+
+.contact-form label {
+    display: block;
+    color: #F4F6FF;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 17px;
+    color: #F4F6FF;
+    background: #111A30;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 11px;
+    outline: none;
+    font: inherit;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #6D5DFB;
+    box-shadow: 0 0 0 3px rgba(109, 93, 251, 0.15);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #727D99;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form select option {
+    background: #111A30;
+    color: #F4F6FF;
+}
+
+.contact-form .primary-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 17px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 75px 16px;
+    }
+
+    .contact-form {
+        padding: 23px 18px;
+    }
+}
