@@ -834,3 +834,274 @@ a {
     font-family: inherit;
     font-size: 15px;
 }
+
+/* PRICING - DREAMSITES */
+
+.pricing-section {
+    padding: 110px 0;
+    background: #0d1325;
+}
+
+.pricing-section .section-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.pricing-section .section-tag {
+    color: #20c9d8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.pricing-section .section-header h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 18px 0;
+    color: #f4f6ff;
+}
+
+.pricing-section .section-header p {
+    color: #9299b2;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    position: relative;
+    padding: 35px 28px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 20px;
+    background: #11182b;
+    transition: transform .3s, border-color .3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    border-color: #6d5dfb;
+}
+
+.pricing-card.featured {
+    border-color: #6d5dfb;
+    background: linear-gradient(145deg, #191b3b, #11182b);
+}
+
+.pricing-label {
+    display: block;
+    color: #20c9d8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.pricing-card h3 {
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.pricing-description {
+    color: #9299b2;
+    font-size: 14px;
+    min-height: 42px;
+}
+
+.pricing-price {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+    margin: 25px 0;
+    white-space: nowrap;
+}
+
+.pricing-price span {
+    color: #20c9d8;
+}
+
+.pricing-price small {
+    font-size: 12px;
+    color: #9299b2;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.pricing-card li {
+    color: #c5c9d8;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.pricing-button {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(100deg, #6d5dfb, #20c9d8);
+    transition: opacity .3s;
+}
+
+.pricing-button:hover {
+    opacity: .85;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #6d5dfb;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.pricing-note {
+    text-align: center;
+    color: #9299b2;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-section {
+        padding: 75px 0;
+    }
+}
+
+/* PORTAFOLIO DREAMSITES */
+
+.portfolio-link {
+    display: block;
+    text-decoration: none;
+}
+
+.portfolio-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #151b2d;
+    isolation: isolate;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.portfolio-link:hover .portfolio-image img {
+    transform: scale(1.08);
+}
+
+.demo-label {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    background: rgba(11, 16, 32, .85);
+    border: 1px solid rgba(32, 201, 216, .5);
+    color: #20c9d8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.portfolio-number {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #000;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 16, 32, .65);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.portfolio-overlay span {
+    color: white;
+    padding: 14px 22px;
+    border-radius: 30px;
+    background: linear-gradient(100deg, #6d5dfb, #20c9d8);
+    font-weight: 700;
+}
+
+.portfolio-link:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 5px;
+}
+
+.portfolio-info h3 {
+    color: #f4f6ff;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.portfolio-info p {
+    color: #9299b2;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.portfolio-category {
+    color: #20c9d8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .portfolio-image {
+        height: 240px;
+    }
+
+    .portfolio-info {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
