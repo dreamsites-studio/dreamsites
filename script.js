@@ -184,8 +184,17 @@ if (projectForm) {
         const sections = document.getElementById("project-sections").value;
         const references = document.getElementById("project-references").value;
         const materials = document.getElementById("project-materials").value;
+        const logo = document.getElementById("project-logo").value;
+        const style = document.getElementById("project-style").value;
+        const deadline = document.getElementById("project-deadline").value;
 
-        const message = `
+        const message = *Materiales disponibles:*
+${materials || "No especificados"}
+
+*Logotipo:* ${logo || "No especificado"}
+*Estilo visual:* ${style || "No especificado"}
+*Fecha deseada:* ${deadline || "Sin fecha definida"}
+
 *NUEVA SOLICITUD - DREAMSITES*
 
 *Cliente:* ${client}
