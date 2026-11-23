@@ -1,0 +1,500 @@
+
+:root {
+    --background: #090b12;
+    --surface: #111521;
+    --gold: #c7a66a;
+    --cream: #f0e9dc;
+    --muted: #9999a4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav {
+    display: flex;
+    gap: 38px;
+}
+
+.nav a {
+    color: #c5c5cb;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--gold);
+}
+
+.menu-button {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 130px 12% 100px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, rgba(5,7,12,0.97) 0%, rgba(5,7,12,0.75) 50%, rgba(5,7,12,0.35) 100%),
+        linear-gradient(0deg, #090b12 0%, transparent 35%),
+        url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=85&w=2200") center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 75% 40%, transparent 0%, rgba(5,7,12,0.35) 75%);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 750px;
+    animation: appear 1.2s ease both;
+}
+
+.eyebrow,
+.section-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(75px, 11vw, 145px);
+    font-weight: 400;
+    line-height: 0.83;
+    letter-spacing: 4px;
+    margin: 32px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.gold-line {
+    width: 85px;
+    height: 1px;
+    background: var(--gold);
+    margin: 30px 0;
+}
+
+.hero-content p {
+    color: #c4c2c0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1.4;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    padding: 18px 25px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.35s;
+}
+
+.hero-button:hover {
+    background: var(--gold);
+    color: #090b12;
+}
+
+.hero-button span {
+    font-size: 17px;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 35px;
+    left: 12%;
+    right: 12%;
+    display: flex;
+    justify-content: space-between;
+    color: #85838a;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+/* INTRO */
+
+.intro {
+    padding: 140px 20px;
+    text-align: center;
+    background: #0d1019;
+}
+
+.intro h2,
+.section-heading h2,
+.contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 28px 0;
+}
+
+.intro h2 span,
+.section-heading h2 span,
+.contact h2 span {
+    color: var(--gold);
+}
+
+.intro p {
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* BOOKS */
+
+.books {
+    padding: 120px 10%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.book-card {
+    transition: transform 0.4s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-12px);
+}
+
+.book-placeholder {
+    aspect-ratio: 0.69;
+    position: relative;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid rgba(199,166,106,0.35);
+    background:
+        radial-gradient(circle at 50% 30%, rgba(199,166,106,0.2), transparent 60%),
+        linear-gradient(145deg, #24212a, #0c1019 75%);
+}
+
+.book-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(199,166,106,0.3);
+    pointer-events: none;
+}
+
+.book-placeholder > span {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.book-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(25px, 3vw, 39px);
+    line-height: 1.05;
+    color: var(--cream);
+}
+
+.book-placeholder small {
+    position: absolute;
+    bottom: 35px;
+    color: var(--gold);
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+.book-info {
+    padding: 24px 2px;
+}
+
+.book-info > span {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.book-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 18px;
+}
+
+.book-info a {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(199,166,106,0.5);
+    padding-bottom: 8px;
+}
+
+/* QUOTE */
+
+.quote {
+    padding: 140px 20px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(8,10,16,0.86), rgba(8,10,16,0.92)),
+        url("https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=85&w=1800") center/cover;
+}
+
+.quote > span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.quote h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 70px);
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 130px 20px;
+    text-align: center;
+    background: #0d1019;
+}
+
+.contact p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+/* FOOTER */
+
+footer {
+    min-height: 110px;
+    padding: 25px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer p,
+footer > a:last-child {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* ANIMATIONS */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: 75px;
+        padding: 0 7%;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        background: #10131e;
+        display: none;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 850px;
+        padding: 120px 8% 100px;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 76px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    .hero-bottom {
+        left: 8%;
+        right: 8%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .books {
+        padding: 90px 7%;
+    }
+
+    .book-grid {
+        gap: 18px;
+    }
+
+    .book-info h3 {
+        font-size: 21px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.book-cover {
+    width: 100%;
+    aspect-ratio: 0.69;
+    overflow: hidden;
+    background: #171b27;
+    border: 1px solid rgba(199,166,106,0.3);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.04);
+}
