@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Tecnología</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="#" class="logo">NEXORA<span>.</span></a>
+
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+
+        <button class="cart-button" id="cart-button">
+            🛒 Carrito <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">EL FUTURO ESTÁ AQUÍ</span>
+
+                <h1>
+                    Tecnología<br>
+                    <span>sin límites.</span>
+                </h1>
+
+                <p>
+                    Descubre dispositivos diseñados para llevar
+                    tu experiencia digital al siguiente nivel.
+                </p>
+
+                <a href="#productos" class="primary-button">
+                    Explorar productos ↗
+                </a>
+
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-circle"></div>
+                <span class="hero-symbol">N</span>
+                <span class="hero-caption">NEXT GENERATION</span>
+            </div>
+
+        </section>
+
+        <!-- BENEFITS -->
+
+        <section class="benefits">
+
+            <div>
+                <span>✦</span>
+                <p>Diseño moderno</p>
+            </div>
+
+            <div>
+                <span>⚡</span>
+                <p>Tecnología actual</p>
+            </div>
+
+            <div>
+                <span>◈</span>
+                <p>Experiencia premium</p>
+            </div>
+
+        </section>
+
+        <!-- PRODUCTS -->
+
+        <section class="products-section" id="productos">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">NUESTRO CATÁLOGO</span>
+                    <h2>Explora nuestros productos.</h2>
+                </div>
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Buscar productos..."
+                >
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-button active" data-category="todos">Todos</button>
+                <button class="filter-button" data-category="audio">Audio</button>
+                <button class="filter-button" data-category="gaming">Gaming</button>
+                <button class="filter-button" data-category="accesorios">Accesorios</button>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+
+                <article class="product-card"
+                    data-name="Auriculares Nova"
+                    data-category="audio">
+
+                    <div class="product-image product-one">
+                        <span class="product-tag">POPULAR</span>
+                    </div>
+
+                    <div class="product-info">
+                        <span>AUDIO</span>
+                        <h3>Auriculares Nova</h3>
+                        <p>Sonido envolvente y diseño inalámbrico.</p>
+                        <strong>$189.900 COP</strong>
+
+                        <button class="add-button"
+                            data-product="Auriculares Nova"
+                            data-price="189900">
+                            Añadir al carrito +
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="Teclado Phantom"
+                    data-category="gaming">
+
+                    <div class="product-image product-two">
+                        <span class="product-tag">GAMING</span>
+                    </div>
+
+                    <div class="product-info">
+                        <span>GAMING</span>
+                        <h3>Teclado Phantom</h3>
+                        <p>Teclado mecánico con iluminación RGB.</p>
+                        <strong>$249.900 COP</strong>
+
+                        <button class="add-button"
+                            data-product="Teclado Phantom"
+                            data-price="249900">
+                            Añadir al carrito +
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="Mouse Velocity"
+                    data-category="gaming">
+
+                    <div class="product-image product-three">
+                        <span class="product-tag">NUEVO</span>
+                    </div>
+
+                    <div class="product-info">
+                        <span>GAMING</span>
+                        <h3>Mouse Velocity</h3>
+                        <p>Precisión y comodidad para jugar.</p>
+                        <strong>$119.900 COP</strong>
+
+                        <button class="add-button"
+                            data-product="Mouse Velocity"
+                            data-price="119900">
+                            Añadir al carrito +
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card"
+                    data-name="Smartwatch Pulse"
+                    data-category="accesorios">
+
+                    <div class="product-image product-four">
+                        <span class="product-tag">DESTACADO</span>
+                    </div>
+
+                    <div class="product-info">
+                        <span>ACCESORIOS</span>
+                        <h3>Smartwatch Pulse</h3>
+                        <p>Estilo moderno para tu día a día.</p>
+                        <strong>$299.900 COP</strong>
+
+                        <button class="add-button"
+                            data-product="Smartwatch Pulse"
+                            data-price="299900">
+                            Añadir al carrito +
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="empty-message">
+                No encontramos productos.
+            </p>
+
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="about" id="nosotros">
+
+            <span class="eyebrow">NUESTRA FILOSOFÍA</span>
+
+            <h2>
+                Pensamos en el futuro.<br>
+                <span>Diseñamos el presente.</span>
+            </h2>
+
+            <p>
+                NEXORA es una tienda conceptual creada para demostrar
+                experiencias de comercio electrónico modernas.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- CART -->
+
+    <div class="cart-overlay" id="cart-overlay">
+
+        <div class="cart-panel">
+
+            <div class="cart-header">
+                <h2>Tu carrito</h2>
+                <button id="close-cart" aria-label="Cerrar carrito">✕</button>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cart-total">$0 COP</strong>
+                </div>
+
+                <button id="checkout-button" class="primary-button">
+                    Simular compra ↗
+                </button>
+
+                <p>Demostración: no se realizarán pagos reales.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="#" class="logo">NEXORA<span>.</span></a>
+        <p>© 2026 NEXORA. Proyecto de demostración de DreamSites.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

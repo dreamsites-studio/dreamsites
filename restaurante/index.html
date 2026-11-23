@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMIÈRE | Restaurante</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">LUMIÈRE<span>.</span></a>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#reservas">Reservas</a>
+        </nav>
+
+        <a href="#contacto" class="nav-button">Reservar mesa ↗</a>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+                <span class="eyebrow">UNA EXPERIENCIA GASTRONÓMICA</span>
+
+                <h1>
+                    El arte de<br>
+                    <span>disfrutar.</span>
+                </h1>
+
+                <p>
+                    Sabores únicos, ingredientes seleccionados
+                    y momentos que merecen ser recordados.
+                </p>
+
+                <a href="#menu" class="primary-button">
+                    Explorar menú ↗
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                <span>EST. 2026</span>
+            </div>
+
+        </section>
+
+        <section class="about" id="nosotros">
+
+            <div class="section-label">01 — NUESTRA ESENCIA</div>
+
+            <div class="about-content">
+                <h2>
+                    Más que comida.<br>
+                    <span>Una experiencia.</span>
+                </h2>
+
+                <p>
+                    En LUMIÈRE creemos que cada plato cuenta una historia.
+                    Combinamos creatividad, ingredientes frescos y pasión
+                    por la gastronomía para crear momentos especiales.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="menu-section" id="menu">
+
+            <div class="section-label">02 — NUESTRA SELECCIÓN</div>
+
+            <div class="section-heading">
+                <h2>Nuestros favoritos</h2>
+                <p>Una selección creada para sorprenderte.</p>
+            </div>
+
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="food-image food-one"></div>
+                    <div class="food-info">
+                        <span>ESPECIALIDAD</span>
+                        <h3>Pasta artesanal</h3>
+                        <p>Pasta fresca con salsa cremosa y hierbas.</p>
+                        <strong>$32.000 COP</strong>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="food-image food-two"></div>
+                    <div class="food-info">
+                        <span>RECOMENDADO</span>
+                        <h3>Risotto gourmet</h3>
+                        <p>Arroz cremoso con ingredientes seleccionados.</p>
+                        <strong>$38.000 COP</strong>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="food-image food-three"></div>
+                    <div class="food-info">
+                        <span>POSTRE</span>
+                        <h3>Delicia de chocolate</h3>
+                        <p>Un final dulce para una gran experiencia.</p>
+                        <strong>$18.000 COP</strong>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="galeria">
+
+    <div class="section-label">03 — NUESTRO UNIVERSO</div>
+
+    <div class="gallery-heading">
+        <h2>Momentos que se disfrutan.</h2>
+        <p>Un vistazo a la experiencia LUMIÈRE.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item gallery-large">
+            <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+                alt="Interior elegante de un restaurante"
+            >
+            <span>El ambiente</span>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85"
+                alt="Mesa de restaurante preparada"
+            >
+            <span>La experiencia</span>
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85"
+                alt="Plato de restaurante"
+            >
+            <span>La gastronomía</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESERVATIONS -->
+
+<section class="reservation" id="reservas">
+
+    <span class="eyebrow">04 — TU EXPERIENCIA</span>
+
+    <h2>Reserva tu <span>momento.</span></h2>
+
+    <p>Completa los datos y prepara tu solicitud de reserva.</p>
+
+    <form class="reservation-form" id="reservation-form">
+
+        <div class="reservation-field">
+            <label for="reservation-name">Nombre</label>
+            <input type="text" id="reservation-name"
+                   placeholder="Tu nombre" required>
+        </div>
+
+        <div class="reservation-field">
+            <label for="reservation-date">Fecha</label>
+            <input type="date" id="reservation-date" required>
+        </div>
+
+        <div class="reservation-field">
+            <label for="reservation-time">Hora</label>
+            <select id="reservation-time" required>
+                <option value="">Selecciona una hora</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+            </select>
+        </div>
+
+        <div class="reservation-field">
+            <label for="reservation-guests">Personas</label>
+            <select id="reservation-guests" required>
+                <option value="">Cantidad</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+            </select>
+        </div>
+
+        <button type="submit" class="primary-button">
+            Preparar solicitud ↗
+        </button>
+
+        <p class="reservation-note">
+            Demo de portafolio. La solicitud no confirma una reserva real.
+        </p>
+
+    </form>
+
+</section>
+
+
+
+        <section class="contact" id="contacto">
+
+            <span class="eyebrow">03 — TE ESPERAMOS</span>
+
+            <h2>Tu próxima experiencia<br>
+                <span>comienza aquí.</span>
+            </h2>
+
+            <p>Ven a descubrir algo extraordinario.</p>
+
+            <a href="mailto:reservas@lumiere.example"
+               class="primary-button">
+                Consultar disponibilidad ↗
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="logo">LUMIÈRE<span>.</span></a>
+        <p>© 2026 LUMIÈRE Restaurant. Proyecto de demostración de DreamSites.</p>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
