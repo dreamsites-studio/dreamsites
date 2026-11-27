@@ -982,12 +982,54 @@ a {
 }
 
 @media (max-width: 600px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
+    .pricing-section {
+        padding: 65px 0;
     }
 
-    .pricing-section {
-        padding: 75px 0;
+    .pricing-section .section-header {
+        margin-bottom: 40px;
+        padding: 0 18px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 0 15px;
+    }
+
+    .pricing-card {
+        padding: 30px 23px;
+        border-radius: 17px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pricing-card h3 {
+        font-size: 24px;
+    }
+
+    .pricing-description {
+        min-height: auto;
+        line-height: 1.6;
+    }
+
+    .pricing-price {
+        font-size: clamp(27px, 8vw, 36px);
+        margin: 22px 0;
+    }
+
+    .pricing-card li {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .pricing-button {
+        padding: 15px;
+    }
+
+    .pricing-badge {
+        right: 15px;
+        font-size: 9px;
     }
 }
 
@@ -1280,16 +1322,55 @@ a {
     cursor: pointer;
 }
 
+/* FORMULARIO RESPONSIVE */
 @media (max-width: 600px) {
     .contact {
-        padding: 75px 16px;
+        padding: 65px 14px;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
+
+    .contact-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 30px;
     }
 
     .contact-form {
-        padding: 23px 18px;
+        padding: 25px 17px;
+        border-radius: 17px;
+        box-sizing: border-box;
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact-form label {
+        font-size: 13px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    .contact-form textarea {
+        min-height: 120px;
+    }
+
+    .contact-form .primary-button {
+        padding: 15px;
+        font-size: 14px;
     }
 }
-
 /* TESTIMONIOS DREAMSITES */
 
 .testimonials {
@@ -1671,3 +1752,514 @@ a {
     margin: 0;
 }
 
+/* MEJORAS VISUALES DEL FORMULARIO DREAMSITES */
+
+.project-form {
+    animation: formAppear 0.8s ease both;
+}
+
+@keyframes formAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section-title {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.form-section-title:hover {
+    transform: translateX(6px);
+}
+
+.form-section-title span {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 7px;
+    background: rgba(32, 201, 216, 0.12);
+}
+
+.project-form input:hover,
+.project-form select:hover,
+.project-form textarea:hover {
+    border-color: rgba(109, 93, 251, 0.6);
+}
+
+.project-form button {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(109, 93, 251, 0.3);
+}
+
+.project-form button:active {
+    transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-form,
+    .form-section-title,
+    .project-form button {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* =====================================
+   EFECTO DE LUZ QUE SIGUE AL CURSOR
+===================================== */
+
+@media (hover: hover) and (pointer: fine) {
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+
+        background: radial-gradient(
+            circle,
+            rgba(109, 93, 251, 0.16) 0%,
+            rgba(32, 201, 216, 0.09) 35%,
+            transparent 70%
+        );
+
+        transform: translate(
+            calc(var(--cursor-x, -500px) - 50%),
+            calc(var(--cursor-y, -500px) - 50%)
+        );
+
+        mix-blend-mode: screen;
+    }
+}
+
+/* =====================================
+   ANIMACIÓN DE TARJETAS AL PASAR EL RATÓN
+===================================== */
+
+.service-card,
+.project-card,
+.pricing-card,
+.testimonial-card,
+.faq-item {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .service-card:hover,
+    .project-card:hover,
+    .pricing-card:hover,
+    .testimonial-card:hover,
+    .faq-item:hover {
+        transform: translateY(-5px);
+        border-color: rgba(109, 93, 251, 0.7);
+
+        box-shadow:
+            0 10px 35px rgba(109, 93, 251, 0.15),
+            0 0 20px rgba(32, 201, 216, 0.08);
+    }
+}
+/* Brillo especial al pasar por WhatsApp */
+@media (hover: hover) and (pointer: fine) {
+    body.whatsapp-hover::before {
+        background: radial-gradient(
+            circle,
+            rgba(37, 211, 102, 0.28) 0%,
+            rgba(18, 140, 126, 0.16) 35%,
+            transparent 70%
+        );
+    }
+
+    .whatsapp-float {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(37, 211, 102, 0.5);
+    }
+}
+/* Relleno animado del botón de WhatsApp */
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* RELLENO ANIMADO */
+.whatsapp-float::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #25D366;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.whatsapp-float:hover::before {
+    transform: scaleX(1);
+}
+
+.whatsapp-float:hover {
+    color: white;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float > * {
+    position: relative;
+    z-index: 1;
+}
+/* APARICIÓN PROGRESIVA */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+/* =================================
+   DREAMSITES - HERO REVEAL
+================================= */
+
+@keyframes dreamHeroIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.hero-label,
+.hero-text h1,
+.hero-text p,
+.hero-buttons,
+.hero-trust,
+.hero-visual {
+    opacity: 1;
+    animation: dreamHeroIn 0.9s ease both;
+}
+
+.hero-label {
+    animation-delay: 0.1s;
+}
+
+.hero-text h1 {
+    animation-delay: 0.3s;
+}
+
+.hero-text p {
+    animation-delay: 0.5s;
+}
+
+.hero-buttons {
+    animation-delay: 0.7s;
+}
+
+.hero-trust {
+    animation-delay: 0.9s;
+}
+
+.hero-visual {
+    animation-delay: 0.5s;
+}
+
+/* Movimiento de las etiquetas */
+@keyframes dreamTagFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+.floating-tag {
+    animation: dreamTagFloat 4s ease-in-out infinite;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .hero-label,
+    .hero-text h1,
+    .hero-text p,
+    .hero-buttons,
+    .hero-trust,
+    .hero-visual,
+    .floating-tag {
+        animation: none;
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
+}
+
+/* Etiqueta superior */
+.hero-label {
+    opacity: 0;
+    animation: dreamReveal 0.8s ease 0.2s forwards;
+}
+
+/* Título */
+.hero-text h1 {
+    opacity: 0;
+    animation: dreamReveal 1s ease 0.4s forwards;
+}
+
+/* Descripción */
+.hero-text > p {
+    opacity: 0;
+    animation: dreamReveal 1s ease 0.7s forwards;
+}
+
+/* Botones */
+.hero-buttons {
+    opacity: 0;
+    animation: dreamReveal 1s ease 1s forwards;
+}
+
+/* Texto inferior */
+.hero-trust {
+    opacity: 0;
+    animation: dreamReveal 1s ease 1.2s forwards;
+}
+
+/* Tarjeta visual */
+.hero-visual {
+    opacity: 0;
+    animation: dreamReveal 1.2s ease 0.6s forwards;
+}
+
+/* Etiquetas flotantes */
+.floating-tag {
+    animation: dreamFloat 4s ease-in-out infinite;
+}
+
+@keyframes dreamFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .hero-label,
+    .hero-text h1,
+    .hero-text > p,
+    .hero-buttons,
+    .hero-trust,
+    .hero-visual {
+        opacity: 1;
+        animation: none;
+        filter: none;
+        transform: none;
+    }
+
+    .floating-tag {
+        animation: none;
+    }
+}
+/* RECUPERAR CONTENIDO DEL HERO */
+.hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label,
+.hero-text h1,
+.hero-text p,
+.hero-buttons,
+.hero-trust,
+.hero-visual {
+    visibility: visible;
+}
+
+@media (max-width: 850px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+/* ANIMACIÓN DE ENTRADA DEL HERO */
+
+@keyframes dreamHeroIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.hero-label,
+.hero-text h1,
+.hero-text p,
+.hero-buttons,
+.hero-trust,
+.hero-visual {
+    animation: dreamHeroIn 0.9s ease both;
+}
+
+.hero-label { animation-delay: 0.1s; }
+.hero-text h1 { animation-delay: 0.3s; }
+.hero-text p { animation-delay: 0.5s; }
+.hero-buttons { animation-delay: 0.7s; }
+.hero-trust { animation-delay: 0.9s; }
+.hero-visual { animation-delay: 0.5s; }
+
+/* DESPLAZAMIENTO SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* TRANSICIONES ENTRE SECCIONES */
+section {
+    scroll-margin-top: 90px;
+}
+
+/* MEJORA DE LA NAVEGACIÓN */
+.nav-links a {
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+/* AJUSTES DE WHATSAPP EN MÓVILES */
+@media (max-width: 600px) {
+    .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        padding: 11px 15px;
+        font-size: 13px;
+        transform: scale(0.9);
+        transform-origin: bottom right;
+    }
+}
+/* BOTONES DEL HERO EN MÓVILES */
+@media (max-width: 600px) {
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+/* HERO RESPONSIVE */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+}
+/* AJUSTES DE SERVICIOS EN MÓVILES */
+@media (max-width: 600px) {
+    #servicios {
+        padding-top: 65px;
+    }
+
+    .service-card {
+        padding: 26px 22px;
+        box-sizing: border-box;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}

@@ -3,32 +3,29 @@
    DREAMSITES - JAVASCRIPT
 ========================= */
 
-// Animaciones al aparecer las secciones
+/* =========================
+   ANIMACIONES AL HACER SCROLL
+========================= */
 
-const observer = new IntersectionObserver((entries) => {
+const elementosAnimados = document.querySelectorAll(
+    ".service-card, .project-card, .section-heading, .about-content, .contact-content, .testimonial-card, .faq-item, .pricing-card"
+);
 
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+const observador = new IntersectionObserver((entradas, observer) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add("visible");
+            observer.unobserve(entrada.target);
         }
-
     });
-
 }, {
     threshold: 0.12
 });
 
-const animatedElements = document.querySelectorAll(
-    ".service-card, .project-card, .section-heading, .about-content, .contact-content"
-);
-
-animatedElements.forEach(element => {
-    element.classList.add("reveal");
-    observer.observe(element);
+elementosAnimados.forEach((elemento) => {
+    elemento.classList.add("reveal");
+    observador.observe(elemento);
 });
-
 
 // Año automático del footer
 
@@ -143,28 +140,6 @@ if (contactForm) {
 
 }
 
-/* ANIMACIONES AL HACER SCROLL */
-
-const elementosAnimados = document.querySelectorAll(
-    '.service-card, .project-card, .testimonial-card, .faq-item, .pricing-card, .about-content, .contact-content'
-);
-
-const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-            entrada.target.classList.add('visible');
-            observador.unobserve(entrada.target);
-        }
-    });
-}, {
-    threshold: 0.15
-});
-
-elementosAnimados.forEach((elemento) => {
-    elemento.classList.add('reveal');
-    observador.observe(elemento);
-});
-
 
 // FORMULARIO DE NUEVOS PROYECTOS
 
@@ -188,13 +163,7 @@ if (projectForm) {
         const style = document.getElementById("project-style").value;
         const deadline = document.getElementById("project-deadline").value;
 
-        const message = *Materiales disponibles:*
-${materials || "No especificados"}
-
-*Logotipo:* ${logo || "No especificado"}
-*Estilo visual:* ${style || "No especificado"}
-*Fecha deseada:* ${deadline || "Sin fecha definida"}
-
+        const message = `
 *NUEVA SOLICITUD - DREAMSITES*
 
 *Cliente:* ${client}
@@ -215,15 +184,47 @@ ${references || "No proporcionadas"}
 
 *Materiales disponibles:*
 ${materials || "No especificados"}
+
+*Logotipo:* ${logo || "No especificado"}
+*Estilo visual:* ${style || "No especificado"}
+*Fecha deseada:* ${deadline || "Sin fecha definida"}
         `;
 
-        // Reemplaza este texto por el número comercial
-        // autorizado y configurado con supervisión de un adulto.
-        const phone = "573053155801";
+        const phone = "NUMERO_COMERCIAL_AUTORIZADO";
 
         const whatsappURL =
             `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappURL, "_blank");
+    });
+}
+
+/* =====================================
+   SEGUIMIENTO DEL CURSOR
+===================================== */
+
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.addEventListener("pointermove", (event) => {
+        document.documentElement.style.setProperty(
+            "--cursor-x",
+            `${event.clientX}px`
+        );
+
+        document.documentElement.style.setProperty(
+            "--cursor-y",
+            `${event.clientY}px`
+        );
+    });
+}
+/* Brillo verde para el botón de WhatsApp */
+const whatsappButton = document.querySelector(".whatsapp-float");
+
+if (whatsappButton) {
+    whatsappButton.addEventListener("pointerenter", () => {
+        document.body.classList.add("whatsapp-hover");
+    });
+
+    whatsappButton.addEventListener("pointerleave", () => {
+        document.body.classList.remove("whatsapp-hover");
     });
 }
